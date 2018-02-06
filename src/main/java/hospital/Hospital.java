@@ -78,7 +78,7 @@ public class Hospital {
 		int numOfPatientsInput;
 		Employee currentEmployee;
 		Collection<Employee> currentEmployeeList;
-		this.addExistingEmployees();
+		addExistingEmployees();
 
 		do {
 			System.out.println("Welcome to the High St. Hospital Employee Management System.");
@@ -102,7 +102,7 @@ public class Hospital {
 				System.out.println("Please enter the name of the employee you would like to find:");
 				nameInput = input.nextLine().trim();
 
-				if (!this.checkForEmployeeByName(nameInput)) {
+				if (!checkForEmployeeByName(nameInput)) {
 					System.out.println();
 					System.out.println("There is no employee with that name in the hospital.");
 					System.out.println("Press enter to continue.");
@@ -110,7 +110,7 @@ public class Hospital {
 					continue;
 				}
 
-				currentEmployee = this.findEmployeeByName(nameInput);
+				currentEmployee = findEmployeeByName(nameInput);
 
 				System.out.println();
 				System.out.println("Here is the employee's info:");
@@ -125,7 +125,7 @@ public class Hospital {
 				System.out.println("Please enter the ID # of the employee you would like to find:");
 				idInput = input.nextLine().trim();
 
-				if (!this.checkForEmployeeByID(idInput)) {
+				if (!checkForEmployeeByID(idInput)) {
 					System.out.println();
 					System.out.println("There is no employee with that ID # in the hospital.");
 					System.out.println("Press enter to continue.");
@@ -133,7 +133,7 @@ public class Hospital {
 					continue;
 				}
 
-				currentEmployee = this.findEmployeeByID(idInput);
+				currentEmployee = findEmployeeByID(idInput);
 
 				System.out.println();
 				System.out.println("Here is the employee's info:");
@@ -148,7 +148,7 @@ public class Hospital {
 				System.out.println("Here is the current status of all employees:");
 				System.out.println("----------");
 
-				currentEmployeeList = this.getAllEmployees();
+				currentEmployeeList = getAllEmployees();
 				for (Employee i : currentEmployeeList) {
 					System.out.println(i);
 				}
@@ -162,7 +162,7 @@ public class Hospital {
 				System.out.println("Here is the salary info of all employees:");
 				System.out.println("----------");
 
-				currentEmployeeList = this.getAllEmployees();
+				currentEmployeeList = getAllEmployees();
 				for (Employee i : currentEmployeeList) {
 					System.out.println("Name: " + i.getName() + "\t Salary: $" + i.calculatePay() + " per year");
 				}
@@ -176,7 +176,7 @@ public class Hospital {
 				System.out.println("Here are all employees who are able to draw blood:");
 				System.out.println("----------");
 
-				currentEmployeeList = this.getAllEmployees();
+				currentEmployeeList = getAllEmployees();
 				for (Employee i : currentEmployeeList) {
 					if (i instanceof BloodDrawer) {
 						System.out.println("Name: " + i.getName() + "\t ID #: " + i.getIDNumber());
@@ -192,7 +192,7 @@ public class Hospital {
 				System.out.println("Here are all employees who are authorized to administer patient care:");
 				System.out.println("----------");
 
-				currentEmployeeList = this.getAllEmployees();
+				currentEmployeeList = getAllEmployees();
 				for (Employee i : currentEmployeeList) {
 					if (i instanceof MedicalDuties) {
 						System.out.println("Name: " + i.getName() + "\t ID #: " + i.getIDNumber());
@@ -226,7 +226,7 @@ public class Hospital {
 					continue;
 				}
 
-				if (this.checkForEmployeeByID(idInput)) {
+				if (checkForEmployeeByID(idInput)) {
 					System.out.println();
 					System.out.println("An employee with that ID already exists.");
 					System.out.println("Press enter to continue.");
@@ -286,7 +286,7 @@ public class Hospital {
 					continue;
 				}
 
-				this.addEmployee(currentEmployee);
+				addEmployee(currentEmployee);
 				System.out.println();
 				System.out.println(nameInput + " has been successfully added to the employee roster.");
 				System.out.println("Press enter to continue.");
@@ -297,7 +297,7 @@ public class Hospital {
 				System.out.println("Please enter the ID # of the employee you would like to find:");
 				idInput = input.nextLine().trim();
 
-				if (!this.checkForEmployeeByID(idInput)) {
+				if (!checkForEmployeeByID(idInput)) {
 					System.out.println();
 					System.out.println("There is no employee with that ID # in the hospital.");
 					System.out.println("Press enter to continue.");
@@ -310,7 +310,7 @@ public class Hospital {
 				choice = input.nextLine();
 
 				if (choice.toLowerCase().equals("y")) {
-					this.removeEmployee(idInput);
+					removeEmployee(idInput);
 					System.out.println();
 					System.out.println("Employee #" + idInput + " has been successfully removed from the roster.");
 					System.out.println("Press enter to continue.");
