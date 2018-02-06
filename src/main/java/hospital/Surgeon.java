@@ -14,7 +14,7 @@ public class Surgeon extends Doctor {
 
 	@Override
 	public String toString() {
-		return "Name: " + this.getName() + "\t ID: " + this.getIDNumber() + "\t Specialty: " + this.getSpecialty() + "\t Is Currently Operating: " + this.getIsOperating();
+		return super.toString() + "\t Is Currently Operating: " + this.getIsOperating();
 	}
 
 }

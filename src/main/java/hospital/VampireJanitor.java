@@ -14,7 +14,7 @@ public class VampireJanitor extends Janitor implements BloodDrawer {
 
 	@Override
 	public String toString() {
-		return "Name: " + this.getName() + "\t ID: " + this.getIDNumber() + "\t Is Currently Sweeping: " + this.getIsSweeping() + "\t Is Currently Biting: " + this.getIsBiting();
+		return super.toString() + "\t Is Currently Biting: " + this.getIsBiting();
 	}
 
 }

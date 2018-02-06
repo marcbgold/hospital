@@ -10,7 +10,7 @@ public class NurseTest {
 	private static final String NAME = "name";
 	private static final String ID_NUM = "12345";
 	private static final int SALARY = 50000;
-	private static final int NUM_OF_PATIENTS = 3;
+	private static final int NUM_OF_PATIENTS = 6;
 	boolean wasBled = false;
 
 	public class BleedableDouble implements Bleedable {

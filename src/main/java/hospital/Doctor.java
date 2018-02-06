@@ -27,6 +27,6 @@ public class Doctor extends MedicalStaff {
 
 	@Override
 	public String toString() {
-		return "Name: " + this.getName() + "\t ID: " + this.getIDNumber() + "\t Specialty: " + this.getSpecialty();
+		return super.toString() + "\tSpecialty: " + this.getSpecialty();
 	}
 }

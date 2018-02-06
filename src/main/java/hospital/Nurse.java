@@ -27,6 +27,6 @@ public class Nurse extends MedicalStaff {
 
 	@Override
 	public String toString() {
-		return "Name: " + this.getName() + "\t ID: " + this.getIDNumber() + "\t # of Patients: " + this.getNumOfPatients();
+		return super.toString() + "\t # of Patients: " + this.getNumOfPatients();
 	}
 }

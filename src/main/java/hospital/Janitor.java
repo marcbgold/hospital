@@ -20,7 +20,7 @@ public class Janitor extends Employee {
 
 	@Override
 	public String toString() {
-		return "Name: " + this.getName() + "\t ID: " + this.getIDNumber() + "\t Is Currently Sweeping: " + this.getIsSweeping();
+		return super.toString() + "\t Is Currently Sweeping: " + this.getIsSweeping();
 	}
 
 }

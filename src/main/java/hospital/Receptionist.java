@@ -20,7 +20,7 @@ public class Receptionist extends Employee {
 
 	@Override
 	public String toString() {
-		return "Name: " + this.getName() + "\t ID: " + this.getIDNumber() + "\t Is Currently On Phone: " + this.getIsOnPhone();
+		return super.toString() + "\t Is Currently On Phone: " + this.getIsOnPhone();
 	}
 
 }

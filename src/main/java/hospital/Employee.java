@@ -19,4 +19,9 @@ public abstract class Employee {
 	}
 
 	public abstract int calculatePay();
+
+	@Override
+	public String toString() {
+		return "ID: " + idNumber + "\t\tName: " + name;
+	}
 }
