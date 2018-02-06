@@ -4,12 +4,10 @@ public abstract class Employee {
 
 	protected String name;
 	protected String idNumber;
-	protected int salary;
 
-	protected Employee(String name, String idNumber, int salary) {
+	protected Employee(String name, String idNumber) {
 		this.name = name;
 		this.idNumber = idNumber;
-		this.salary = salary;
 	}
 
 	public String getName() {
@@ -20,7 +18,5 @@ public abstract class Employee {
 		return idNumber;
 	}
 
-	public int calculatePay() {
-		return salary;
-	}
+	public abstract int calculatePay();
 }

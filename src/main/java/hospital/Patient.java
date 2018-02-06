@@ -1,13 +1,15 @@
 package hospital;
 
-public class Patient implements Treatable, Bleedable {
+public class Patient implements Bleedable, Treatable {
 
+	private static final int DEFAULT_HEALTH_LEVEL = 10;
+	private static final int DEFAULT_BLOOD_LEVEL = 50;
 	private int healthLevel;
 	private int bloodLevel;
 
 	public Patient() {
-		healthLevel = 10;
-		bloodLevel = 50;
+		healthLevel = DEFAULT_HEALTH_LEVEL;
+		bloodLevel = DEFAULT_BLOOD_LEVEL;
 	}
 
 	public int getHealthLevel() {

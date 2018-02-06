@@ -1,9 +1,9 @@
 package hospital;
 
-public abstract class MedicalStaff extends Employee implements PatientTreater {
+public abstract class MedicalStaff extends Employee implements MedicalDuties {
 
-	protected MedicalStaff(String name, String idNumber, int salary) {
-		super(name, idNumber, salary);
+	protected MedicalStaff(String name, String idNumber) {
+		super(name, idNumber);
 	}
 
 }

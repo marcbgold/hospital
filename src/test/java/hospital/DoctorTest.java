@@ -42,7 +42,7 @@ public class DoctorTest {
 
 	@Test
 	public void shouldCareForDouble() {
-		PatientTreater underTest = new Doctor(NAME, ID_NUM, SALARY, SPECIALTY);
+		MedicalDuties underTest = new Doctor(NAME, ID_NUM, SALARY, SPECIALTY);
 		Treatable patient = new TreatableDouble();
 
 		underTest.careForPatient(patient);

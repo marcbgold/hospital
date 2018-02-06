@@ -40,7 +40,7 @@ public class EmergencyDispatcherTest {
 
 	@Test
 	public void shouldCareForDouble() {
-		PatientTreater underTest = new EmergencyDispatcher(NAME, ID_NUM, SALARY);
+		MedicalDuties underTest = new EmergencyDispatcher(NAME, ID_NUM, SALARY);
 		Treatable patient = new TreatableDouble();
 
 		underTest.careForPatient(patient);

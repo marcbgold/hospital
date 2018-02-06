@@ -41,7 +41,7 @@ public class NurseTest {
 
 	@Test
 	public void shouldCareForDouble() {
-		PatientTreater underTest = new Nurse(NAME, ID_NUM, SALARY, NUM_OF_PATIENTS);
+		MedicalDuties underTest = new Nurse(NAME, ID_NUM, SALARY, NUM_OF_PATIENTS);
 		Treatable patient = new TreatableDouble();
 
 		underTest.careForPatient(patient);

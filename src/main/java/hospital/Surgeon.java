@@ -12,4 +12,9 @@ public class Surgeon extends Doctor {
 		return isOperating;
 	}
 
+	@Override
+	public String toString() {
+		return "Name: " + this.getName() + "\t ID: " + this.getIDNumber() + "\t Specialty: " + this.getSpecialty() + "\t Is Currently Operating: " + this.getIsOperating();
+	}
+
 }
